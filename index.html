@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Techno Bookshelf</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Techno Bookshelf</h1>
+    </header>
+
+    <main class="container">
+        <div class="search-section">
+            <div class="title-search">
+                <h2>Cari Buku</h2>
+            </div>
+            <div class="input-group">
+                <input type="text" class="input-search" placeholder="Masukkan judul buku">
+                <button class="button-search">Cari Buku</button>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="add-book">
+                <div class="header-add-book">
+                    <h3 class="title-form">Tambah Buku Baru</h3>
+                </div>
+                <form class="input-fields">
+                    <div class="input-group">
+                        <label for="title" class="label-input">Judul</label>
+                        <input type="text" class="input-title-book input-book" id="title" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="writer" class="label-input">Penulis</label>
+                        <input type="text" class="input-writer-book input-book" id="writer" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="year" class="label-input">Tahun</label>
+                        <input type="number" class="input-year-book input-book" id="year" required>
+                    </div>
+                    <div class="input-check">
+                        <label for="beread" class="label-input">Selesai Baca</label>
+                        <input type="checkbox" class="input-read-book input-book" id="beread">
+                    </div>
+                    <div class="input-group">
+                        <button type="submit" class="button-add-book button-form">Tambah Buku</button>
+                    </div>
+                </form>
+            </div>
+            <div class="book-content">
+                <div class="header-content-book header-not-read">
+                    <h3>Belum Selesai Dibaca</h3>
+                </div>
+                <div class="list-book list-not-read">
+                    
+                </div>
+            </div>
+            <div class="book-content">
+                <div class="header-content-book header-read">
+                    <h3>Selesai Dibaca</h3>
+                </div>
+                <div class="list-book list-read">
+                   
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="dialog-delete-book">
+        <div class="dialog-content">
+            <h3>Hapus Buku <span class="title-delete-book"></span></h3>
+            <p>Apakah Anda yakin ingin menghapus buku ini?</p>
+            <div class="buttons">
+                <button class="button-dialog-delete button-cancel-delete">Batal</button>
+                <button class="button-dialog-delete button-confirm-delete">Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

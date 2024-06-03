@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --bg-dark: #010114;
+    --bg-light: #ffffff;
+    --bg-dark-opacity: rgba(0, 0, 0, .7);
+    --text-white: #f8f8ff;
+    --text-black: #000014;
+    --cyan-color:  #01FFF4;
+    --green-color: #7CFF01;
+    --pink-color: #FF1178;
+    --yellow-color: #FFF205;
+    --purple-color: #BC13FE;
+    --glass-color: rgba(255, 255, 255, .1);
+    --shadow-dark: rgba(0, 0, 0, .3);
+    --shadow-light: rgba(255, 255, 255, .3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-dark);
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    background-color: var(--glass-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.header .title {
+    color: var(--text-white);
+    font-style: italic;
+    /* text-shadow: 0px 0px 5px var(--green-color), 0px 0px 10px var(--cyan-color), 0px 0px 10px var(--pink-color); */
+}
+
+.container {
+    width: 100%;
+    margin-inline: auto;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.container .search-section {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--bg-light);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px var(--glass-color);
+}
+
+.search-section .title-search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--bg-dark);
+    margin-bottom: 30px;
+}
+
+.search-section .input-group {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input-group .input-search {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    color: var(--text-black);
+    border: 1px solid var(--bg-dark);
+    border-radius: 5px;
+    box-shadow: 2px 2px 7px var(--shadow-dark);
+}
+
+.input-group .button-search {
+    padding: 0 10px;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: var(--bg-dark);
+    color: var(--text-white);
+    font-size: .8em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 7px var(--shadow-dark);
+}
+
+.container .main-section {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.main-section .add-book {
+    min-width: 300px;
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--bg-light);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--shadow-light);
+    
+}
+
+.add-book .header-add-book {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: var(--yellow-color);
+    text-align: center;
+    border-bottom: 1px solid var(--bg-dark);
+}
+
+.add-book .header-add-book h3 {
+    color: var(--text-black);
+}
+
+.add-book .input-fields {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.input-fields .input-group {
+    width: 100%;
+    display: inherit;
+    flex-direction: inherit;
+    gap: 3px;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+.input-fields .input-group .label-input,
+.input-fields .input-check .label-input {
+    font-size: .9em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.input-fields .input-group .input-book {
+    width: 100%;
+    padding: 7px;
+    font-size: .9em;
+    border-radius: 5px;
+    border: 1px solid var(--bg-dark);
+}
+
+.input-fields .input-check {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.input-fields .input-check .input-book {
+    transform: translateY(1px);
+    cursor: pointer;
+}
+
+.input-fields .input-group .button-add-book {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: var(--yellow-color);
+    font-weight: bold;
+    color: var(--text-black);
+    box-shadow: 3px 4px 10px var(--shadow-dark);
+    cursor: pointer;
+}
+
+.main-section .book-content {
+    min-width: 300px;
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--bg-light);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--shadow-light);
+}
+
+.book-content .header-content-book {
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--bg-dark);
+}
+
+.book-content .header-content-book.header-not-read {
+    background-color: var(--cyan-color);
+}
+
+.book-content .header-content-book.header-read {
+    background-color: var(--pink-color);
+}
+
+.book-content .list-book {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book-content .list-book .book {
+    width: 100%;
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--shadow-dark);
+    border-left: 1px solid var(--shadow-dark);
+    padding: 15px 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+}
+
+.book .title-book {
+    margin-bottom: 10px;
+}
+
+.book .title-book.title-not-read {
+    color: var(--cyan-color);
+}
+
+.book .title-book.title-read {
+    color: var(--pink-color);
+}
+
+.book .data-book {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: .9em;
+    margin-bottom: 7px;
+}
+
+.data-book .label-data {
+    flex-basis: 20%;
+    
+}
+
+.data-book .value-data {
+    flex: 1;
+    font-style: italic;
+}
+
+.book .buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.book .buttons .button-book {
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: .8em;
+    box-shadow: 2px 2px 10px var(--shadow-dark);
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-black);
+}
+
+.book .buttons .button-book.type-button {
+    background-color: var(--green-color);
+}
+
+.book .buttons .button-book.edit-button {
+    background-color: var(--purple-color);
+}
+
+.book .buttons .button-book.delete-button {
+    background-color: var(--pink-color);
+}
+
+.dialog-delete-book {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    place-items: center;
+    background-color: var(--bg-dark-opacity);
+    padding: 10px;
+    display: none;
+}
+
+.dialog-delete-book.show {
+    display: grid;
+}
+
+.dialog-delete-book .dialog-content {
+    max-width: 400px;
+    width: 100%;
+    min-width: 300px;
+    border-radius: 10px;
+    background-color: var(--bg-light);
+    padding: 20px;
+}
+
+.dialog-content h3 {
+    margin-bottom: 15px;
+    color: var(--pink-color);
+}
+
+.dialog-content p {
+    font-size: .9em;
+    margin-bottom: 25px;
+}
+
+.dialog-content .buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.dialog-content .buttons .button-dialog-delete {
+    outline: none;
+    border: none;
+    padding: 8px 32px;
+    border-radius: 5px;
+    font-size: .8em;
+    cursor: pointer;
+    color: var(--text-white)
+}
+
+.dialog-content .buttons .button-dialog-delete.button-cancel-delete {
+    background-color: var(--bg-dark);
+}
+
+.dialog-content .buttons .button-dialog-delete.button-confirm-delete {
+    background-color: var(--pink-color);
+}
